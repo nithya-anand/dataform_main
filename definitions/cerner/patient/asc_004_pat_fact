@@ -1,5 +1,5 @@
 config {
-  type: "view"
+  type: "table"
 }
 
-SELECT patient_key from `my-clo-proj-nit.patient.pat_empi`
+SELECT patient_key from ${ref("asc_001_pat_dim")}
