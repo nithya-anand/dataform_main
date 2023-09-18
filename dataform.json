@@ -1,5 +1,5 @@
 {
-  "defaultSchema": "dataform",
+  "defaultSchema": "dataf_pat",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "my-clo-proj-nit",
