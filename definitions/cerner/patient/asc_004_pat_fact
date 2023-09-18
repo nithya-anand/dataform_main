@@ -1,5 +1,0 @@
-config {
-  type: "table"
-}
-
-SELECT patient_key from ${ref("asc_001_pat_dim")}

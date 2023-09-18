@@ -1,6 +1,6 @@
 {
   "defaultSchema": "dataf_pat",
-  "assertionSchema": "dataform_assertions",
+  "assertionSchema": "dataf_pat",
   "warehouse": "bigquery",
   "defaultDatabase": "my-clo-proj-nit",
   "defaultLocation": "US"
