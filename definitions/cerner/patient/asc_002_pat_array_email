@@ -1,0 +1,5 @@
+config {
+  type: "view"
+}
+
+SELECT * from `my-clo-proj-nit.patient.gender_lookup`

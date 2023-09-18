@@ -1,0 +1,6 @@
+
+config {
+  type: "view"
+}
+
+SELECT * from `my-clo-proj-nit.patient.pat_empi`
