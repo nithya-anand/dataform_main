@@ -1,0 +1,2 @@
+
+SELECT patient_key from ${ref("asc_tgt003_patient_dimension")}
