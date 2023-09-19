@@ -1,0 +1,7 @@
+
+config {
+  type: "view"
+}
+
+with a as (select * from ${ref("asc_stg001_cern_dim_read")} )
+select * except(effective_start_dt),CURRENT_TIMESTAMP as last_updated from a

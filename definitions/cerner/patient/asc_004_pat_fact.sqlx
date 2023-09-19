@@ -1,6 +1,0 @@
-config {
-  type: "table"
-}
-
-with a as (SELECT * from  ${ref("asc_003_pat_array_phone")})
-select patient_key from a

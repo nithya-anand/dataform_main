@@ -1,5 +1,1 @@
-config {
-  type: "table"
-}
 
-SELECT * from  ${ref("asc_001_pat_dim")}
