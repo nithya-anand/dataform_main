@@ -1,0 +1,4 @@
+ config { type: "table" }
+${udf.sample(
+  ref("common"),
+  ["patient_key", "instance_id"])}
