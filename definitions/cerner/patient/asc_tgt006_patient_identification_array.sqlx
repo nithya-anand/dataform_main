@@ -1,7 +1,6 @@
 config {
   type: "view",
-  tags: ["cerner"],
-  dependencies: ["asc_tgt009_patient_census_fact"]
+  tags: ["cerner"]
 }
 
 select patient_key,null as iden
