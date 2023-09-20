@@ -1,6 +1,7 @@
 
 config {
-  type: "view"
+  type: "view",
+  tags: ["cerner"]
 }
 
 with a as (select * from ${ref("asc_stg001_cern_dim_read")} )

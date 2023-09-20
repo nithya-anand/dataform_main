@@ -1,4 +1,5 @@
 config {
-  type: "table"
+  type: "table",
+  tags: ["cerner"]
 }
 SELECT patient_key from ${ref("asc_tgt003_patient_dimension")}

@@ -1,5 +1,6 @@
 config {
-  type: "view"
+  type: "view",
+  tags: ["cerner"]
 }
 
 select patient_key,null as email

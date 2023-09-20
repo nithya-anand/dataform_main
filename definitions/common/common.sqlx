@@ -1,2 +1,3 @@
-  config { type: "table" }
+  config { type: "table",
+  tags: ["common"] }
   SELECT * FROM ${constants.PROJECT_ID}.${constants.SCHEMA_NAME}.pat_empi

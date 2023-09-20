@@ -1,5 +1,6 @@
 config {
-  type: "view"
+  type: "view",
+  tags: ["cerner"]
 }
 
 select patient_key,instance_name,patient_state_abbr,patient_zip_code
