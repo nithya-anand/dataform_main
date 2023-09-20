@@ -1,5 +1,6 @@
 config {
   type: "table",
-  tags: ["cerner","patient","fact"]
+  tags: ["cerner","patient","fact"],
+  dependencies: [ "asc_tgt003_patient_dimension"]
 }
-SELECT patient_key from ${ref("asc_tgt003_patient_dimension")}
+SELECT 5
