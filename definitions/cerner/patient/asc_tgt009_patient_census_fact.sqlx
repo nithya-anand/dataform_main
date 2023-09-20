@@ -1,6 +1,7 @@
 config {
   type: "table",
-  tags: ["cerner","patient","fact"],
-  dependencies: [ "asc_tgt003_patient_dimension"]
+  tags: ["cerner","patient","fact"]
 }
-SELECT 5
+
+
+SELECT * from `my-clo-proj-nit.patient.pat_empi` 
