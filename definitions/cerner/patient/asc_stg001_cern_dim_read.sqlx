@@ -3,6 +3,7 @@ config {
   tags: ["cerner"]
 }
 
+
 SELECT * from `my-clo-proj-nit.patient.pat_empi` a 
 left join `my-clo-proj-nit.patient.gender_lookup` b
 on
