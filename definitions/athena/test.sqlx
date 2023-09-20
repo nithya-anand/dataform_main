@@ -1,0 +1,14 @@
+config {
+  type: "view",
+  tags: ["athena"]
+}
+
+
+SELECT * from `my-clo-proj-nit.patient.pat_empi` a 
+left join `my-clo-proj-nit.patient.gender_lookup` b
+on
+a.patient_gender_code=b.gender_cd
+left join
+`my-clo-proj-nit.patient.city_lookup` c
+on
+a.patient_state_abbr=c.city_cd
