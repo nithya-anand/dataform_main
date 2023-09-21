@@ -1,0 +1,7 @@
+config {
+  type: "table",
+  tags: ["cerner"]
+}
+
+select patient_key,null as phone_num
+ from ${ref("asc_tgt003_patient_dimension")} 

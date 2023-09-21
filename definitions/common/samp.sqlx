@@ -1,5 +1,4 @@
- config { type: "table",
-  tags: ["common"] }
-${udf.sample(
-  ref("common"),
-  ["patient_key", "instance_id"])}
+ config { type: "table" }
+ 
+${udf.audit(
+  ref("asc_tgt003_patient_dimension"),["last_updated"],["last_updated"])}

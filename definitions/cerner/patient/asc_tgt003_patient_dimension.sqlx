@@ -4,5 +4,12 @@ config {
   tags: ["cerner"]
 }
 
-with a as (select * from ${ref("asc_stg001_cern_dim_read")} )
-select * ,CURRENT_TIMESTAMP as last_updated from a
+with abc as (select * except(patient_gender_code),		
+MD5(patient_key||'~'||ehr_source||'~'||instance_id||'~'||instance_name) as patient_dim_dk,		
+MD5(patient_last_name||'~'||patient_first_name||'~'||patient_middle_name||'~'||patient_birth_date||'~'||patient_gender_code||'~'||patient_state_abbr||'~'||patient_zip_code) as data_hash,
+extract_timestamp as effective_start_dt,
+extract_timestamp as valid_from
+from		
+${ref("asc_stg001_cern_dim_read")})
+select * except(effective_start_dt),CURRENT_TIMESTAMP() as last_updated from abc
+
