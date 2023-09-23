@@ -1,0 +1,16 @@
+config { type: "table"}
+ 
+select 1 as sno,count(*) as total
+from (select *
+from ${ref("asc_tgt003_patient_dimension_scd")} 
+where scd_valid_to in 
+(select max(last_updated) 
+from ${ref("asc_tgt003_patient_dimension_scd")})
+and run_id = '2023-09-23 13:20:22.533485cerner' )
+
+ 
+
+
+
+
+

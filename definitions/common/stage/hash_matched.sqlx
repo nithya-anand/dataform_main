@@ -1,0 +1,4 @@
+config { type: "table" }
+ 
+select count(*) as unprocessed from ${ref("asc_tgt003_patient_dimension")}
+

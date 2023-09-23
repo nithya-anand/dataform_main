@@ -4,7 +4,8 @@ config {
 }
 
 
-SELECT * from `my-clo-proj-nit.patient.pat_empi` a 
+SELECT *,current_timestamp as calc_time
+from `my-clo-proj-nit.patient.pat_empi` a 
 left join `my-clo-proj-nit.patient.gender_lookup` b
 on
 a.patient_gender_code=b.gender_cd

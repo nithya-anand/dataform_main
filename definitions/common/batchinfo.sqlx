@@ -3,5 +3,18 @@ config {
   tags: ["cerner"]
 }
 
-select patient_key,null as phone_num
- from ${ref("asc_tgt003_patient_dimension")} 
+select 
+src.total as source_count,
+tgt_i.total as target_count,
+tgt_o.total as inserts,
+tgt.total as update,
+tgt_i.total-(tgt.total)-tgt_o.total as unprocessed
+ from ${ref("audit_source_count")} as src join
+ ${ref("audit_tgt_count")} as tgt
+ on src.sno=tgt.sno
+ join
+${ref("audit_tgt_count_inserted")} as tgt_i
+on tgt.sno=tgt_i.sno
+join 
+${ref("audit_tgt_insert_only")} as tgt_o
+on tgt.sno=tgt_o.sno

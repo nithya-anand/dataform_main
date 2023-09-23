@@ -1,0 +1,4 @@
+config { type: "table"}
+ 
+${udf.audit(
+  ref("asc_tgt003_patient_dimension_scd"),["patient_key"])}

@@ -1,4 +1,0 @@
- config { type: "table" }
- 
-${udf.audit(
-  ref("asc_tgt003_patient_dimension"),["last_updated"],["last_updated"])}

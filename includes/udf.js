@@ -1,11 +1,11 @@
-function audit(table, dimensions, metrics) {
+function audit(table,  metrics) {
     return `
         select
-        ${dimensions.map(field => `${field} as ${field}`).join(",")},
+        1 as sno,
         ${metrics.map(field => `count(${field}) as total`).join(",\n")}
         from ${table}
-        group by ${dimensions.map((field, i) => `${i + 1}`).join(", ")}
       `;
   }
 
   module.exports = { audit };
+

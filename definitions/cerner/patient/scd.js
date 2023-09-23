@@ -1,7 +1,7 @@
 const scd = require("dataform-scd");
 
 // const { updates, table } =
- scd("prestage_scd", {
+ scd("asc_tgt003_patient_dimension_scd", {
   // A unique identifier for rows in the table.
   uniqueKey: "patient_dim_dk",
   // A field that stores a timestamp or date of when the row was last changed.
