@@ -1,5 +1,0 @@
-config { type: "table"}
- 
-select 1 as sno,current_timestamp as running_time,count(*) as total  
-from ${ref("asc_tgt003_patient_dimension_scd")} 
-where last_updated != (select max(scd_valid_from) from  ${ref("asc_tgt003_patient_dimension_scd")}  )

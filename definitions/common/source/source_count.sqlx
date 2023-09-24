@@ -1,4 +1,0 @@
- config { type: "table" }
- 
-${udf.audit(
-  ref("asc_stg001_cern_dim_read"),["*"])}

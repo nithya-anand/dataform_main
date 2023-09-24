@@ -1,5 +1,0 @@
-config { type: "table" }
- 
-select count(data_hash) as insert_update from ${ref("asc_tgt003_patient_dimension_scd")}
-where data_hash not in 
-(select data_hash from ${ref("asc_tgt003_patient_dimension")})
