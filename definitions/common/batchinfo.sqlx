@@ -1,0 +1,25 @@
+config {
+  type: "table"
+}
+
+select (select distinct run_id from ${ref("asc_tgt003_patient_dimension")} ) as batch_run_id,
+null as batch_name,
+null as batch_target,
+null as source_inc,
+null as data_processing_start,
+null as data_processing_end,
+null as status,
+src.total as source_count,
+tgt_i.total as target_count,
+tgt_o.total as inserts,
+tgt.total as update,
+tgt_i.total-(tgt.total)-tgt_o.total as unprocessed
+ from ${ref("audit_source_count")} as src join
+ ${ref("audit_tgt_count")} as tgt
+ on src.sno=tgt.sno
+ join
+${ref("audit_target_count")} as tgt_i
+on tgt.sno=tgt_i.sno
+join 
+${ref("audit_tgt_insert_only")} as tgt_o
+on tgt.sno=tgt_o.sno

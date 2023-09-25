@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "dataform-test-repo",
   "dependencies": {
     "@dataform/core": "2.4.2"
+=======
+  "name": "patient",
+  "dependencies": {
+    "@dataform/core": "2.4.2",
+    "dataform-scd": "https://github.com/dataform-co/dataform-scd/archive/0.4.tar.gz"
+>>>>>>> refs/heads/main
   }
 }

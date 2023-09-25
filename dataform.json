@@ -1,8 +1,9 @@
 {
-  "defaultSchema": "dataform",
-  "assertionSchema": "dataform_assertions",
+
+  "defaultSchema": "dataf_pat",
+  "assertionSchema": "dataf_pat",
   "warehouse": "bigquery",
-  "defaultDatabase": "nithya-sandbox",
+  "defaultDatabase": "my-clo-proj-nit",
   "defaultLocation": "US"
 }
     

@@ -1,0 +1,10 @@
+config {
+  type: "view",
+  tags: ["cerner"]
+}
+
+select patient_key,instance_name,patient_state_abbr,patient_zip_code
+ from ${ref("asc_tgt003_patient_dimension")} 
+
+
+

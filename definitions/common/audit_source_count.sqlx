@@ -1,0 +1,4 @@
+ config { type: "table", tags:'common' }
+ 
+${udf.audit(
+  ref("asc_stg001_cern_dim_read"),["patient_key"])}
