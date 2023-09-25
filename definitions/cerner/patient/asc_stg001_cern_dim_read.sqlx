@@ -3,8 +3,12 @@ config {
   tags: ["cerner","patient","dim"]
 }
 
+pre_operations {
+  INSERT INTO `my-clo-proj-nit.patient.batch` (run_id)
+  values (CONCAT(FORMAT_DATETIME('%d%m%Y%H%M%S', CURRENT_DATETIME()), 'cerner-pat'))
+}
 
-SELECT *
+SELECT *, (select max(run_id) from `my-clo-proj-nit.patient.batch`) as run_id
 from `my-clo-proj-nit.patient.pat_empi` a 
 left join `my-clo-proj-nit.patient.gender_lookup` b
 on

@@ -8,8 +8,7 @@ with abc as (select *,
 MD5(patient_key||'~'||ehr_source||'~'||instance_id||'~'||instance_name||'~'||extract_timestamp) as patient_dim_dk,		
 MD5(patient_last_name||'~'||patient_first_name||'~'||patient_middle_name||'~'||patient_birth_date||'~'||patient_gender_code||'~'||patient_state_abbr||'~'||patient_zip_code) as data_hash,
 extract_timestamp as effective_start_dt,
-extract_timestamp as valid_from,
-concat(FORMAT_DATE('%d%m%G%I%M%S',current_datetime),'cerner-pat') as run_id
+extract_timestamp as valid_from
 from		
 ${ref("asc_stg001_cern_dim_read")})
 select * except(effective_start_dt),current_timestamp as last_updated from abc

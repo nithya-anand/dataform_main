@@ -7,7 +7,7 @@ where last_updated in
 (select max(last_updated) 
 from ${ref("asc_tgt003_patient_dimension_scd")})
 and scd_valid_to is null
-and  run_id = (select run_id from ${self()} ))
+and  run_id = (select distinct run_id from ${ref("asc_tgt003_patient_dimension")} ))
 
  
 
