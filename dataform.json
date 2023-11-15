@@ -1,5 +1,5 @@
 {
-  "defaultSchema": "dataf_pat",
+  "defaultSchema": "dataf_pat1",
   "assertionSchema": "dataf_pat",
   "warehouse": "bigquery",
   "defaultDatabase": "my-clo-proj-nit",
