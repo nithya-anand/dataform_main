@@ -4,6 +4,8 @@ config {
   tags: ["cerner"]
 }
 
+
+
 with abc as (select *,		
 MD5(patient_key||'~'||ehr_source||'~'||instance_id||'~'||instance_name||'~'||extract_timestamp) as patient_dim_dk,		
 MD5(patient_last_name||'~'||patient_first_name||'~'||patient_middle_name||'~'||patient_birth_date||'~'||patient_gender_code||'~'||patient_state_abbr||'~'||patient_zip_code) as data_hash,
