@@ -3,4 +3,6 @@ config {
   tags: ["cerner"]
 }
 
-SELECT * from `my-clo-proj-nit.patient.pat_empi` 
+SELECT *
+from
+`my-clo-proj-nit.patient.pat_empi`
